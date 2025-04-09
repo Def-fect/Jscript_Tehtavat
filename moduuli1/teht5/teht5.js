@@ -1,0 +1,1 @@
+const vuosi parseInt(prompt('anna vuosiluku, onko se'))
