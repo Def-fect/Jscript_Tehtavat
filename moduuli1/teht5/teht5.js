@@ -1,25 +1,15 @@
 const vuosi = parseInt(prompt('anna vuosiluku, onko se'));
 
-if (vuosi /= 4 ) {
-  console.log('The number is positive.');
-} else if (number < 0) {
-  console.log('The number is negative.');
+if ((vuosi % 400 === 0) && (vuosi % 100 === 0) ) {
+  console.log('luku '+ vuosi +' on karkausvuosi');
+} else if ((vuosi % 4 === 0) && (vuosi % 100 != 0)) {
+  console.log('luku '+ vuosi +' on karkausvuosi');
 } else {
-  console.log('That number is zero.');
+  console.log('luku '+ vuosi +' ei ole karkausvuosi');
 }
 
-console.log(vastaus);
 
 
 
-num = int(input("Anna luku"))
 
-if num > 1:
-    for i in range(2, (num // 2) + 1):
-        if (num % i) == 0:
-            print(num, "ei ole alkuluku")
-            break
-    else:
-        print(num, "luku on alkuuku")
-else:
-    print(num, "ei ole alkuluku")
+
