@@ -1,23 +1,21 @@
-ihmislista = [];
+const lasku = parseInt(prompt('Enter the number of participants:'));
 
-const getCandidatesCount = () =>
-    Number(prompt('kuinka monta tyyppia'))
+const ihmiset = [];
 
-const numberOfCandidates =getCandidatesCount()
-
-const setCandidateData = (number) => {
-  for (let i = 0; i < number; i++) {
-    const name = prompt('Name for candidate' + (i + 1));
-
-    ihmislista.push({name: name});
+for (let i = 0; i < lasku; i++) {
+  const name = prompt(`Enter name for participant ${i + 1}:`);
+  if (name && name.trim() !== '') {
+    ihmiset.push(name.trim());
   }
 }
 
-setCandidateData(numberOfCandidates)
+
+ihmiset.sort((a, b) => a.localeCompare(b));
 
 
-ihmislista.sort((a, b) => a.name.localeCompare(b.name));
-
-
-document.querySelector('#target').innerText = 'Good morning, ' + ihmislista + '!';
-    const ol = document.createElement('ol');
+const ol = document.getElementById('lista');
+ihmiset.forEach(participant => {
+  const liElement = document.createElement('li');
+  liElement.textContent = participant;
+  ol.appendChild(liElement);
+});
