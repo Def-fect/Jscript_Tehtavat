@@ -9,3 +9,4 @@ do {
 
 numerot.sort((a, b) => b - a)
 console.log(numerot);
+

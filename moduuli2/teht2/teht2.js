@@ -4,9 +4,7 @@ const ihmiset = [];
 
 for (let i = 0; i < lasku; i++) {
   const name = prompt(`Enter name for participant ${i + 1}:`);
-  if (name && name.trim() !== '') {
-    ihmiset.push(name.trim());
-  }
+    ihmiset.push(name.trim())
 }
 
 

@@ -5,7 +5,7 @@ if ((vuosi % 400 === 0) && (vuosi % 100 === 0) ) {
 } else if ((vuosi % 4 === 0) && (vuosi % 100 != 0)) {
   console.log('luku '+ vuosi +' on karkausvuosi');
 } else {
-  console.log('luku '+ vuosi +' ei ole karkausvuosi');
+  console.log(`luku + ${vuosi} + ei ole karkausvuosi`);
 }
 
 

@@ -1,3 +1,5 @@
-const name = prompt('Type your name.');
-document.querySelector('#target').innerHTML = 'Good morning, ' + name + '!';
-console.log('Noice to meet you, ' + name);
+let i = 0;
+while (i < 30) {
+  console.log("Hi");
+  i++;
+}
